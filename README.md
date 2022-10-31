@@ -18,7 +18,7 @@ same as the normal inverter, just smaller. input pin is behind the output instea
 new component, this has a set and reset pin. The set pin is longer than the reset
 
 * D Latch  
-same as the in game D Latch. Both clock pin is behind instead of on top, and it is shorter than the data pin
+same as the in game D Latch. The clock pin is behind instead of on top, and it is shorter than the data pin
 
 * AND gate  
 2 pin version of the normal AND gate. Cannot be adjusted for 3/4 pin variants
@@ -65,6 +65,10 @@ and the letters a-f for hex displays. It also includes a 'ripple blank' input an
 numeric display. Enable this pin on the highest digit of your dipsplay, then chain the output of the digit to the rb input of the next lowest digit, repeat for
 all the digits in your display. You can leave the least significant digit unconnected so you still see the single 0 when there is no value to display. This also fits
 perfectly behind a 3x5 pixel display, letting you create tight and compact displays with this component.
+
+
+Note all the inputs of these components have been shortened slightly so input pins can share the same square as output pins of other components, giving you the freedom
+to shrink those builds even more!
 
 # Where's the mod for Logic World version 0.90?
 The difference between the LogicScript implementations in LW 0.90 and 0.91 is so large that it would not be possible to go back to that version. 
