@@ -1,5 +1,5 @@
 # My First Mod for Logic World
-Tested and working for public preview version 0.91 preview 510
+Tested and working for public preview version 0.91 preview 510. This is all purely SUCC file trickery with some LogicScript. There is no C# involved, which is really cool. Thanks to IsCoffeeTho for showing me the Way of the Force(TM)
 
 # So whats in here?
 It is a mix of modified variants of existing in game components, and some more complex function components that do cool things like 
