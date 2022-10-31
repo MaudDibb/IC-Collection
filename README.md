@@ -26,8 +26,11 @@ same as the in game D Latch. The clock pin is behind instead of on top, and it i
 * XOR gate  
 same as the LW version, just smaller!
 
+* Relay
+same as the LW verion, control pin is behind instead of on top. longer pin is data, shorter is control
+
 * Buffer/Fast buffers  
-same as the LW versions, except they dont use the fancy angled meshes, just a shrunk down box
+same as the LW versions, except they dont use the fancy angled meshes, just a shrunk down box. The fast buffers have a registration mark for the input side
 
 * Binary to BCD converters  
 These are half height versions of the normal sized ones described later. Available in 4 in/4 out, 5 in/5 out and 5 in/6 out versions
