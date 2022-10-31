@@ -17,7 +17,17 @@ ThroughHole:
                 rotation: (180, 0, 0)
     logicCode: LogicWorld.LogicCode.ThroughPeg
     placingRules: StandardFlippable
-    
+
+MiniPeg:
+    column: "Miscellaneous"
+    category: "Routing"
+    prefab:
+        inputs:
+            -
+                length: 0.4
+                bottomless: false
+    placingRules: PegLike
+
 MiniInverter:
     column: "Chips"
     category: "MiniLogic"
