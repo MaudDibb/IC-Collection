@@ -1,0 +1,36 @@
+input'8 a
+input'8 b
+input'1 cin
+
+/*
+    0 xxxxx nn opcode
+    10 aaaaaa  branch
+    11 aaaaaa  0branch
+
+    00000 - reset (clear x/y counters, reset x/y increments, clear acc, clear screen)
+    00001 - load x/y counters with x1/y1
+    00010 - toggle x increment (Set counter x to count down)
+    00011 - toggle y increment (set counter y to count down)
+    00100 - clk x counter
+    00101 - clk y counter
+    00110 - acc + x2
+    00111 - acc + y2
+    01000 - acc - x counter
+    01001 - acc - y counter
+    01010 - reg a = acc
+    01011 - reg b = acc
+    01100 - acc + reg a
+    01101 - acc - reg b
+    01110 - 
+    01111 - clock display
+
+*/
+output'8 sum
+output'1 cout
+
+when *
+    local $s'9 = a + b
+    $s '= $s + cin
+    sum = ($s)'8
+    cout '= ($s >> 8)'1 ? 1 : 0
+end

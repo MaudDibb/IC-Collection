@@ -1,0 +1,69 @@
+input'4 in
+input rb_in
+output'7 segs
+output rb_out
+
+//       AAA
+//      F   B
+//       GGG
+//      E   C
+//       DDD
+
+//             ABCDEFG
+//             vvvvvvv
+
+const nosegs = 0000000b
+const segs0  = 1111110b
+const segs1  = 0110000b
+const segs2  = 1101101b
+const segs3  = 1111001b
+const segs4  = 0110011b
+const segs5  = 1011011b
+const segs6  = 1011111b
+const segs7  = 1110000b
+const segs8  = 1111111b
+const segs9  = 1111011b
+const segsA  = 1110111b
+const segsB  = 0011111b
+const segsC  = 1001110b
+const segsD  = 0111101b
+const segsE  = 1001111b
+const segsF  = 1000111b
+
+when *
+    if in == 0
+        segs = rb_in ? nosegs : segs0
+    else if in == 1
+        segs = segs1
+    else if in == 2
+        segs = segs2
+    else if in == 3
+        segs = segs3
+    else if in == 4
+        segs = segs4
+    else if in == 5
+        segs = segs5
+    else if in == 6
+        segs = segs6
+    else if in == 7
+        segs = segs7
+    else if in == 8
+        segs = segs8
+    else if in == 9
+        segs = segs9
+    else if in == 10
+        segs = segsA
+    else if in == 11
+        segs = segsB
+    else if in == 12
+        segs = segsC
+    else if in == 13
+        segs = segsD
+    else if in == 14
+        segs = segsE
+    else
+        segs = segsF
+    end
+
+    rb_out '= (rb_in & (in == 0)) ? 1 : 0
+end

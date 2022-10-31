@@ -1,0 +1,4 @@
+input'4 in
+output'4 out
+
+assign out = in > 4 ? (in + 3)'4 : (in)'4

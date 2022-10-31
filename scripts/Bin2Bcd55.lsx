@@ -1,0 +1,20 @@
+input'5 in
+output'5 out
+
+when *
+    if in > 29
+        out '= in + 18
+    else if in > 24
+        out '= in + 15
+    else if in > 19
+        out '= in + 12
+    else if in > 14
+        out '= in + 9
+    else if in > 9
+        out '= in + 6
+    else if in > 4
+        out '= in + 3
+    else
+        out '= in
+    end
+end

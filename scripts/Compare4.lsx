@@ -1,0 +1,17 @@
+input'4 a
+input'4 b
+output'1 eq
+output'1 neq
+output'1 lt
+output'1 gt
+output'1 lte
+output'1 gte
+
+when *
+    eq  '= a == b ? 1 : 0
+    neq '= a == b ? 0 : 1
+    lt  '= a < b  ? 1 : 0
+    gt  '= a > b  ? 1 : 0
+    lte '= (a < b) | (a == b) ? 1 : 0
+    gte '= (a > b) | (a == b) ? 1 : 0
+end

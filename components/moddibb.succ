@@ -1,0 +1,1141 @@
+ThroughHole:
+    column: "Miscellaneous"
+    category: "Routing"
+    prefab:
+        blocks:
+            -
+                position: (0, 0, 0)
+                scale: (9/30, -0.5, 9/30)
+                color: 111111
+        inputs:
+            -
+                length: 0.01
+                position: (0, 0, 0)
+            -
+                length: 0.01
+                position: (0, -1/2, 0)
+                rotation: (180, 0, 0)
+    logicCode: LogicWorld.LogicCode.ThroughPeg
+    placingRules: StandardFlippable
+    
+MiniInverter:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab:
+        blocks:
+            - 
+                scale: (1, 0.5, 1)
+        inputs:
+            -
+                position: (0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+                startOn: true
+    logicCode: LogicWorld.LogicCode.Inverter
+    placingRules:
+        gridPlacingDimensions: (1, 2)
+
+MiniSRLatch:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab:
+        blocks:
+            -
+                color: 6D4020
+                scale: (1, 0.5, 1)
+                # position: (0, -0.5, 0)
+        inputs:
+            -
+                position: (-0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.3
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: SRLatch
+    placingRules:
+        offsetDimensions: (1, 2)
+        gridPlacingDimensions: (1, 3)
+        allowFineRotation: false
+
+MiniDLatch:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab:
+        blocks:
+            -
+                color: 349F16
+                scale: (1, 0.5, 1)
+                # position: (0.5, 0, 0)
+        inputs:
+            -
+                position: (-0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.3
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicCode: LogicWorld.LogicCode.DLatch
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+
+MiniXorGate:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab: 
+        blocks:
+            -
+                color: 1D2f8E
+                scale: (1, 0.5, 1)
+                # position: (0, -0.5, 0)
+        inputs:
+            -
+                position: (-0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicCode: LogicWorld.LogicCode.XorGate
+    placingRules: 
+        offsetDimensions: (1, 2)
+        gridPlacingDimensions: (1, 3)
+        allowFineRotation: false
+
+MiniAndGate:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab: 
+        blocks:
+            -
+                color: 6D1010
+                scale: (1, 0.5, 1)
+                # position: (0, -0.5, 0)
+        inputs:
+            -
+                position: (-0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0.25, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicCode: LogicWorld.LogicCode.AndGate
+    placingRules: 
+        offsetDimensions: (1, 2)
+        gridPlacingDimensions: (1, 3)
+        allowFineRotation: false
+
+
+MiniBuffer:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab:
+        blocks:
+            -
+                scale: (1, 0.5, 1)
+        inputs:
+            -
+                position: (0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicCode: LogicWorld.LogicCode.Buffer
+    placingRules: Standard
+
+MiniFastBuffer:
+    column: "Chips"
+    category: "MiniLogic"
+    prefab:
+        blocks:
+            -
+                color: 8E0E5F
+                scale: (1, 0.5, 1)
+            -
+                scale: (0.2, 0.0001, 0.2)
+                position : (0, 0.5, -0.25)
+                color: 222222
+            -
+                scale: (0.2, 0.0001, 0.2)
+                position : (0, 0, -0.25)
+                color: 222222
+        inputs:
+            -
+                position: (0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+                length: 0.4
+    logicCode: LogicWorld.LogicCode.FastBuffer
+    placingRules: Standard
+
+MiniBin2Bcd44:
+    column: "Chips"
+    category: "MiniIC"
+    prefab:
+        blocks:
+            -
+                scale: (4, 0.5, 1)
+                position: (0.5, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, 0.5, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (2, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd44
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.25
+
+MiniBin2Bcd55:
+    column: "Chips"
+    category: "MiniIC"
+    prefab:
+        blocks:
+            -
+                scale: (5, 0.5, 1)
+                position: (0, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, 0.5, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (2, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd55
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.25
+
+
+MiniBin2Bcd56:
+    column: "Chips"
+    category: "MiniIC"
+    prefab:
+        blocks:
+            -
+                scale: (6, 0.5, 1)
+                position: (0.5, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, 0.5, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.25, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (3, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.25, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.25, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd56
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.25
+
+Decoder2bit:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (4, 1, 1)
+                position: (0.5, 0, 0)
+                color: 333333
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, 1, 0)
+                color: aa8800
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, -0.0001, 0)
+                color: aa8800
+        inputs:
+            -
+                position: (0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Decoder2bit
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 2)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Decoder3bit:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (8, 1, 1)
+                position: (0.5, 0, 0)
+                color: 333333
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, 1, 0)
+                color: aa8800
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, -0.0001, 0)
+                color: aa8800
+        inputs:
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-3, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (4, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (4, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Decoder3bit
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 2)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Decoder4bit:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (16, 1, 1)
+                position: (0.5, 0, 0)
+                color: 333333
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-7, 1, 0)
+                color: aa8800
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-7, -0.0001, 0)
+                color: aa8800
+        inputs:
+            -
+                position: (-4, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-5, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-6, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-7, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (8, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (8, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (7, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (6, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (5, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (4, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-4, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-5, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-6, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-7, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Decoder4bit
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Bin2Bcd44:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (4, 1, 1)
+                position: (0.5, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, 1, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-1, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd44
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Bin2Bcd55:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (5, 1, 1)
+                position: (0, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, 1, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd55
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+
+Bin2Bcd56:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (6, 1, 1)
+                position: (0.5, 0, 0)
+                color: 666666
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, 1, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-2, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Bin2Bcd56
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Vedic4x4:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (8, 1, 1)
+                position: (0.5, 0, 0)
+                color: cccc66
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, 1, 0.3)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, -0.0001, 0.3)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, 1, -0.3)
+                color: 228822
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, -0.0001, -0.3)
+                color: 228822    
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (1, 1,-0.3)
+                color: 882222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (1, -0.0001,-0.3)
+                color: 882222
+        inputs:
+            -
+                position: (4, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (3, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-3, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            
+        outputs:
+            -
+                position: (4, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Vedic4x4
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Adder8bit:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (8, 1, 1)
+                position: (0.5, 0, 0)
+                color: 66cc66
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, 1, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (-3, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (4, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (3, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (2, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-3, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (4, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (3, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (2, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-3, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-3.5, 0.5, 0)
+                rotation: (0, 0, 90)
+                length: 0.4
+        outputs:
+            -
+                position: (4, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (4.5, 0.5, 0)
+                rotation: (0, 0, -90)
+    logicScript: Adder8bit
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Hex7Seg:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (3, 5, 1)
+                position: (0, 0, 0)
+                color: aa6666
+        inputs:
+            -
+                position: (0, 3.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 2.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 1.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.5, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1.5, 0.5, 0)
+                rotation: (0, 0, -90)
+                length: 0.4
+        outputs:
+            -
+                position: (0, 4.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 3.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 1.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 1.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 3.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 2.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1.5, 0.5, 0)
+                rotation: (0, 0, 90)
+    logicScript: Hex7Seg
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5
+
+Comparator4:
+    column: "Chips"
+    category: "IC"
+    prefab:
+        blocks:
+            -
+                scale: (6, 1, 1)
+                position: (0.5, 0, 0)
+                color: 6666cc
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (2, 1, 0)
+                color: 222222
+            -
+                scale: (0.2, 0.001, 0.2)
+                position : (2, -0.0001, 0)
+                color: 222222
+        inputs:
+            -
+                position: (-2, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.3, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-2, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (-1, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (0, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+            -
+                position: (1, 0.7, -0.5)
+                rotation: (-90, 0, 0)
+                length: 0.4
+        outputs:
+            -
+                position: (3, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (0, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-1, 0.5, 0.5)
+                rotation: (90, 0, 0)
+            -
+                position: (-2, 0.5, 0.5)
+                rotation: (90, 0, 0)
+    logicScript: Compare4
+    placingRules:
+        offsetDimensions: (1, 1)
+        gridPlacingDimensions: (1, 1)
+        allowFineRotation: false
+        canBeFlipped: true
+        flippingPointHeight: 0.5

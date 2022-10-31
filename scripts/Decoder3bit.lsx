@@ -1,0 +1,27 @@
+input'3 sel
+input enable
+output'8 out
+
+when *
+    if enable
+        if sel == 0
+            out '= 1
+        else if sel == 1
+            out '= 2
+        else if sel == 2
+            out '= 4
+        else if sel == 3
+            out '= 8
+        else if sel == 4
+            out '= 16
+        else if sel == 5
+            out '= 32
+        else if sel == 6
+            out '= 64
+        else
+            out '= 128
+        end
+    else
+        out '= 0
+    end
+end
