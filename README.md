@@ -58,6 +58,14 @@ be.
 As the name suggests, an 8 bit adder. Has a carry in input on one side, and a carry out on the other. The registration marks on the chip will tell you where 
 the lsb of the inputs and outputs will be.
 
+* 7 Segment Display Driver  
+This device takes a 4 bit input (you can use those fancy bcd converters above, hint hint ;)) and turns on the proper segment outputs to light up your numeric 
+displays. The outputs are arranged to go directly to the segments that need to be lit to represent the number it is displaying. The display handles digits 0-9 
+and the letters a-f for hex displays. It also includes a 'ripple blank' input and output. These are handy when you dont want to display leading zeros on a larger
+numeric display. Enable this pin on the highest digit of your dipsplay, then chain the output of the digit to the rb input of the next lowest digit, repeat for
+all the digits in your display. You can leave the least significant digit unconnected so you still see the single 0 when there is no value to display. This also fits
+perfectly behind a 3x5 pixel display, letting you create tight and compact displays with this component.
+
 # Where's the mod for Logic World version 0.90?
 The difference between the LogicScript implementations in LW 0.90 and 0.91 is so large that it would not be possible to go back to that version. 
 Just upgrade to the public preview version plz ;)
