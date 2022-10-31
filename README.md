@@ -11,6 +11,9 @@ the height of the board plus the component fits within 1 square. You can create 
 
 The list so far:
 
+* Half Pegs  
+yep. smaller pegs for tight routing in those small spaces
+
 * Inverter  
 same as the normal inverter, just smaller. input pin is behind the output instead of above it
 
@@ -18,7 +21,7 @@ same as the normal inverter, just smaller. input pin is behind the output instea
 new component, this has a set and reset pin. The set pin is longer than the reset
 
 * D Latch  
-same as the in game D Latch. The clock pin is behind instead of on top, and it is shorter than the data pin
+same as the normal D Latch. Both data and clock pins are behind the output. The clock pin is shorter than the data pin
 
 * AND gate  
 2 pin version of the normal AND gate. Cannot be adjusted for 3/4 pin variants
