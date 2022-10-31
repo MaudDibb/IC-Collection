@@ -66,6 +66,14 @@ numeric display. Enable this pin on the highest digit of your dipsplay, then cha
 all the digits in your display. You can leave the least significant digit unconnected so you still see the single 0 when there is no value to display. This also fits
 perfectly behind a 3x5 pixel display, letting you create tight and compact displays with this component.
 
+* 4 bit Comparator  
+This is a handy chip that compares 2 4 bit values and turns on specific outputs depending on the difference of the a/b inputs (bottom row is a, top is b):
+  * a == b
+  * a != b
+  * a < b
+  * a > b
+  * a <= b
+  * a >= b
 
 Note all the inputs of these components have been shortened slightly so input pins can share the same square as output pins of other components, giving you the freedom
 to shrink those builds even more!
