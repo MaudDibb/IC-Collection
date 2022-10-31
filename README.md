@@ -26,7 +26,7 @@ same as the in game D Latch. The clock pin is behind instead of on top, and it i
 * XOR gate  
 same as the LW version, just smaller!
 
-* Relay
+* Relay  
 same as the LW verion, control pin is behind instead of on top. longer pin is data, shorter is control
 
 * Buffer/Fast buffers  
