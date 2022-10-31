@@ -1,10 +1,11 @@
-ComponentColumn.Chips: "MaudDibb's Things "
+ComponentColumn.Chips: "MaudDibb's Things"
 
 ComponentCategory.MiniLogic: "Mini Logic"
 ComponentCategory.MiniIC: "Mini IC's"
 ComponentCategory.IC: "IC's"
 
 MODDIBB.ThroughHole: "Board Via"
+MODDIBB.MiniPeg: "Half Height Peg"
 MODDIBB.MiniInverter: "Half Height Inverter"
 MODDIBB.MiniXorGate: "Half Height XOR Gate"
 MODDIBB.MiniAndGate: "Half Height AND Gate"
