@@ -2,8 +2,15 @@
 Tested and working for public preview version 0.91 preview 510. This is all purely SUCC file trickery with some LogicScript. There is no C# involved, which is really cool. Thanks to IsCoffeeTho for showing me the Way of the Force(TM)
 
 # So whats in here?
-It is a mix of modified variants of existing in game components, and some more complex function components that do cool things like 
-decoders, adder, multiplier, 7 segment display driver... read on for the full list
+I'll let the images do the work for me:
+
+![some half height components](/images/halfheight1.png)
+![some more half height components](/images/halfheight2.png)
+![binary to bcd converters](/images/bcdconverters.png)
+![decoders](/images/decoders.png)
+![7 segment display driver](/images/sevenseg.png)
+![8 bit adder](/images/adder.png)
+![4x4 bit multiplier](/images/multiplier.png)
 
 # Miniature Components!
 These are half height versions of the most common components in Logic World. Half height means when you stack a board with these components, 
