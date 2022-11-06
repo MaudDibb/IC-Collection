@@ -14,6 +14,9 @@ The list so far:
 * Half Pegs  
 yep. smaller pegs for tight routing in those small spaces
 
+* Half Sockets  
+a truly tiny socket
+
 * Inverter  
 same as the normal inverter, just smaller. input pin is behind the output instead of above it
 
@@ -24,7 +27,7 @@ new component, this has a set and reset pin. The set pin is longer than the rese
 same as the normal D Latch. Both data and clock pins are behind the output. The clock pin is shorter than the data pin
 
 * AND gate  
-2 pin version of the normal AND gate. Cannot be adjusted for 3/4 pin variants
+2, 3 and 4 pin versions of the normal AND gate.
 
 * XOR gate  
 same as the LW version, just smaller!
